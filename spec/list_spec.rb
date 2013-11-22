@@ -1,3 +1,4 @@
+require File.dirname(__FILE__) + '/spec_helper'
 require 'list'
 
 describe List, "when empty" do
