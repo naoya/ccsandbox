@@ -18,6 +18,10 @@ describe List, "when empty" do
     @empty_list.first.should be_nil
   end
 
+  it "also returns nil" do
+    @empty_list.last.should be_nil
+  end
+
   after do
     @empty_list = nil
   end
