@@ -38,3 +38,33 @@ describe List, "when initialized with object" do
     @list.should == [{:cat => "Nuko"}, {}, {}]
   end
 end
+
+describe List, "when initialized with 3 elements " do
+  before do
+    @list = List.new
+    for i in 1..3 do
+      @list.push(i)
+    end
+  end
+
+  it "should have 3 elements" do
+    @list.size.should == 3
+  end
+end
+
+describe List, "first_index" do
+  before do
+    @list = List.new
+    for i in 1..3 do
+      @list.push(i)
+    end
+  end
+
+  it "returns first index" do
+    @list.first_index.should == 0
+  end
+
+  it "returns secondary index" do
+    @list.first_index { |v| v == 2 }.should == 1
+  end
+end
