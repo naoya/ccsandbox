@@ -13,6 +13,10 @@ describe List, "when empty" do
     @empty_list.size.should == 0
   end
 
+  it "returns nil" do
+    @empty_list.first.should be_nil
+  end
+
   after do
     @empty_list = nil
   end
